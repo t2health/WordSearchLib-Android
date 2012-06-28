@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_wordsearch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/spacer" >
+
+        <TextView
+            android:id="@+id/lbl_word_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Word List"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <GridView
+            android:id="@+id/grd_word_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/lbl_word_list"
+            android:horizontalSpacing="4dp"
+            android:layoutAnimation="@anim/wordsearch_layout"
+            android:numColumns="3"
+            android:verticalSpacing="4dp" >
+
+        </GridView>
+
+    </RelativeLayout>
+    
+    <com.t2.wordsearch.WordsearchGridView
+        android:id="@+id/grd_wordsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true" >
+    </com.t2.wordsearch.WordsearchGridView>
+
+    <View
+        android:id="@+id/spacer"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/grd_wordsearch"
+        android:background="#FAFAFA" />
+
+</RelativeLayout>
